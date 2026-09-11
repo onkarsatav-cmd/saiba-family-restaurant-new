@@ -56,9 +56,12 @@ header{
 }
 .logo{display:flex;align-items:center;gap:12px}
 .logo-mark{
-  width:45px;height:45px;border:1px solid var(--gold);border-radius:50%;
-  display:grid;place-items:center;color:var(--gold);font-family:"Playfair Display";font-size:20px
+  width:52px;height:52px;flex:0 0 52px;border-radius:50%;
+  overflow:hidden;display:block;
+  box-shadow:0 0 0 1px rgba(213,168,76,.55),0 5px 18px rgba(0,0,0,.25)
 }
+.logo-mark img{width:100%;height:100%;object-fit:cover}
+
 .logo-text strong{display:block;font-family:"Playfair Display";font-size:19px;letter-spacing:.3px}
 .logo-text small{display:block;color:var(--gold);font-size:9px;letter-spacing:2px;text-transform:uppercase}
 nav{display:flex;align-items:center;gap:27px}
@@ -221,6 +224,17 @@ footer a:hover{color:var(--gold2)}
   .contact-copy h2{font-size:38px}
   .field.full{grid-column:auto}
 }
+
+.hero-logo{
+  width:118px;height:118px;object-fit:cover;border-radius:50%;
+  margin:0 auto 18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.38),0 0 0 1px rgba(213,168,76,.45);
+}
+@media(max-width:700px){
+  .logo-mark{width:46px;height:46px;flex-basis:46px}
+  .hero-logo{width:92px;height:92px}
+}
+
 </style>
 </head>
 
@@ -235,7 +249,7 @@ footer a:hover{color:var(--gold2)}
 <header>
   <div class="container nav">
     <a href="#home" class="logo">
-      <div class="logo-mark">S</div>
+      <div class="logo-mark"><img src="logo.png" alt="Saiba Family Resto logo"></div>
       <div class="logo-text">
         <strong>Saiba</strong>
         <small>Family Resto · Bar · Lodging</small>
@@ -258,6 +272,7 @@ footer a:hover{color:var(--gold2)}
 <main>
 <section class="hero" id="home">
   <div class="hero-content reveal">
+    <img class="hero-logo" src="logo.png" alt="Saiba Family Resto logo">
     <div class="eyebrow">Welcome to Saiba</div>
     <h1>Stay. Dine.<br><span>Relax.</span></h1>
     <p>Comfortable Stay, Delicious Food, and Relaxing Ambience – All in One Place.</p>
