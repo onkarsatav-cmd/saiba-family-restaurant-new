@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Saiba Family Resto, Bar & Lodging – Comfortable stay, delicious food and relaxing ambience in Pirangut, Pune.">
+<meta name="theme-color" content="#101010">
+<title>Saiba Family Resto, Bar & Lodging | Pirangut, Pune</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0d0d0d;
+  --card:#151515;
+  --card2:#1b1b1b;
+  --gold:#d5a84c;
+  --gold2:#f0c96b;
+  --cream:#f6f0e4;
+  --muted:#aaa49a;
+  --line:rgba(255,255,255,.09);
+  --white:#fff;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--bg);
+  color:var(--cream);
+  line-height:1.65;
+}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;object-fit:cover}
+.container{width:min(var(--max),92%);margin:auto}
+.topbar{
+  background:#080808;
+  border-bottom:1px solid var(--line);
+  color:#c9c4ba;
+  font-size:13px;
+}
+.topbar .container{
+  min-height:38px;display:flex;justify-content:space-between;align-items:center;gap:15px
+}
+.topbar span{display:flex;align-items:center;gap:7px}
+header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(13,13,13,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{
+  width:45px;height:45px;border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;color:var(--gold);font-family:"Playfair Display";font-size:20px
+}
+.logo-text strong{display:block;font-family:"Playfair Display";font-size:19px;letter-spacing:.3px}
+.logo-text small{display:block;color:var(--gold);font-size:9px;letter-spacing:2px;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:27px}
+nav a{font-size:14px;color:#ddd;transition:.25s}
+nav a:hover{color:var(--gold2)}
+.nav-cta{
+  border:1px solid var(--gold);padding:11px 18px!important;color:var(--gold2)!important;border-radius:3px
+}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:28px;cursor:pointer}
+
+.hero{
+  min-height:calc(100vh - 116px);position:relative;display:grid;place-items:center;overflow:hidden;
+  background:
+   linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.48),rgba(0,0,0,.72)),
+   url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85") center/cover;
+}
+.hero:after{
+  content:"";position:absolute;inset:auto 0 0;height:160px;
+  background:linear-gradient(transparent,var(--bg));
+}
+.hero-content{position:relative;z-index:2;width:min(900px,92%);text-align:center;padding:80px 0}
+.eyebrow{
+  color:var(--gold2);letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:20px
+}
+.hero h1{
+  font-family:"Playfair Display";font-size:clamp(44px,7vw,82px);line-height:1.02;font-weight:600
+}
+.hero h1 span{color:var(--gold2)}
+.hero p{max-width:680px;margin:25px auto 35px;color:#ddd;font-size:17px}
+.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-width:155px;
+  padding:14px 23px;border-radius:3px;font-weight:700;font-size:14px;transition:.25s
+}
+.btn-gold{background:var(--gold);color:#101010}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-outline{border:1px solid rgba(255,255,255,.35);color:white}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold2)}
+
+.section{padding:95px 0}
+.section-head{max-width:720px;margin:0 auto 48px;text-align:center}
+.section-head .eyebrow{margin-bottom:12px}
+.section-head h2{font-family:"Playfair Display";font-size:clamp(32px,5vw,52px);font-weight:600}
+.section-head p{color:var(--muted);margin-top:13px}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.intro-photo{height:500px;border-radius:6px;overflow:hidden}
+.intro-photo img{height:100%}
+.intro-copy h3{font-family:"Playfair Display";font-size:36px;margin-bottom:18px}
+.intro-copy p{color:var(--muted);margin-bottom:18px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:25px 0}
+.check{border:1px solid var(--line);padding:13px 15px;background:rgba(255,255,255,.02)}
+.check b{color:var(--gold2);margin-right:8px}
+
+.rooms{background:#111}
+.room-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.room{
+  background:var(--card);border:1px solid var(--line);padding:27px 22px;min-height:210px;
+  transition:.25s
+}
+.room:hover{transform:translateY(-5px);border-color:rgba(213,168,76,.55)}
+.room-number{color:var(--gold);font-size:12px;letter-spacing:2px}
+.room h3{font-family:"Playfair Display";font-size:25px;margin:14px 0 10px}
+.room p{color:var(--muted);font-size:14px}
+
+.dining-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dining-card{
+  min-height:250px;padding:30px;position:relative;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(145deg,#191919,#101010)
+}
+.dining-card:before{content:"";position:absolute;width:100px;height:100px;border:1px solid rgba(213,168,76,.22);border-radius:50%;right:-30px;top:-30px}
+.dining-card .icon{font-size:28px;color:var(--gold2)}
+.dining-card h3{font-family:"Playfair Display";font-size:27px;margin:17px 0 8px}
+.dining-card p{color:var(--muted);font-size:14px}
+
+.features{background:#111}
+.feature-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.feature{
+  text-align:center;padding:25px 10px;border:1px solid var(--line);background:var(--card)
+}
+.feature-icon{font-size:24px;color:var(--gold2);margin-bottom:8px}
+.feature span{display:block;font-size:12px;color:#d5d0c7}
+
+.gallery-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-template-rows:220px 220px;gap:12px}
+.gallery-item{overflow:hidden;border-radius:4px}
+.gallery-item:first-child{grid-row:span 2}
+.gallery-item img{height:100%;transition:.5s}
+.gallery-item:hover img{transform:scale(1.05)}
+
+.location{
+  background:linear-gradient(180deg,#111,#0b0b0b)
+}
+.location-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}
+.info-card{background:var(--card);border:1px solid var(--line);padding:34px}
+.info-card h3{font-family:"Playfair Display";font-size:30px;margin-bottom:23px}
+.info-row{display:flex;gap:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:0}
+.info-icon{color:var(--gold2);width:25px}
+.info-row strong{display:block;font-size:13px;margin-bottom:3px}
+.info-row span,.info-row a{color:var(--muted);font-size:14px}
+.map{min-height:430px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:430px;border:0;filter:grayscale(100%) contrast(1.1)}
+
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px;align-items:start}
+.contact-copy h2{font-family:"Playfair Display";font-size:45px;line-height:1.1;margin-bottom:18px}
+.contact-copy p{color:var(--muted);margin-bottom:25px}
+.phone-list{display:grid;gap:10px}
+.phone-list a{display:inline-flex;width:max-content;color:var(--gold2);font-weight:700}
+.form{background:var(--card);border:1px solid var(--line);padding:32px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;color:#c5c0b7;text-transform:uppercase;letter-spacing:1px}
+.field input,.field textarea{
+  width:100%;border:1px solid var(--line);background:#0c0c0c;color:white;padding:14px;
+  font:inherit;outline:0;border-radius:2px
+}
+.field input:focus,.field textarea:focus{border-color:var(--gold)}
+.field textarea{min-height:125px;resize:vertical}
+.form button{border:0;cursor:pointer;margin-top:16px;width:100%}
+
+footer{border-top:1px solid var(--line);background:#080808;padding:45px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}
+footer h3{font-family:"Playfair Display";font-size:24px;margin-bottom:12px}
+footer p,footer a{color:#8f8a82;font-size:13px}
+footer a:hover{color:var(--gold2)}
+.footer-title{color:var(--gold2);font-size:11px;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
+.copyright{border-top:1px solid var(--line);margin-top:35px;padding-top:20px;text-align:center;color:#666;font-size:12px}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:900px){
+  nav{gap:15px}
+  .room-grid{grid-template-columns:1fr 1fr}
+  .feature-grid{grid-template-columns:repeat(3,1fr)}
+  .intro-grid,.location-grid,.contact-grid{grid-template-columns:1fr}
+  .intro-photo{height:390px}
+  .dining-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .topbar .container{justify-content:center;font-size:11px}
+  .topbar span:last-child{display:none}
+  .nav{min-height:68px}
+  .menu-btn{display:block}
+  nav{
+    display:none;position:absolute;top:68px;left:0;right:0;background:#101010;
+    border-bottom:1px solid var(--line);padding:18px 5%;flex-direction:column;align-items:stretch
+  }
+  nav.open{display:flex}
+  nav a{padding:10px 0}
+  .nav-cta{text-align:center}
+  .hero{min-height:650px}
+  .hero-content{padding:55px 0}
+  .section{padding:70px 0}
+  .checks,.room-grid,.dining-grid,.footer-grid,.form-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px}
+  .gallery-item:first-child{grid-row:auto;grid-column:span 2}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .contact-copy h2{font-size:38px}
+  .field.full{grid-column:auto}
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+  <div class="container">
+    <span>📍 Pirangut, Tal. Mulshi, Dist. Pune – 412115</span>
+    <span>🕐 Restaurant 7 AM–11 PM &nbsp; | &nbsp; Bar 11 AM–11 PM</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <div class="logo-mark">S</div>
+      <div class="logo-text">
+        <strong>Saiba</strong>
+        <small>Family Resto · Bar · Lodging</small>
+      </div>
+    </a>
+
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+
+    <nav id="nav">
+      <a href="#rooms">Rooms</a>
+      <a href="#dining">Dining</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="tel:9921521881">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content reveal">
+    <div class="eyebrow">Welcome to Saiba</div>
+    <h1>Stay. Dine.<br><span>Relax.</span></h1>
+    <p>Comfortable Stay, Delicious Food, and Relaxing Ambience – All in One Place.</p>
+    <div class="buttons">
+      <a class="btn btn-gold" href="tel:9921521881">Call to Book</a>
+      <a class="btn btn-outline" href="#location">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container intro-grid">
+    <div class="intro-photo reveal">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=85" alt="Comfortable hotel room">
+    </div>
+    <div class="intro-copy reveal">
+      <div class="eyebrow">A place to feel at home</div>
+      <h3>Everything you need, under one roof.</h3>
+      <p>Saiba Family Resto, Bar & Lodging brings together comfortable rooms, delicious dining and a relaxing ambience in Pirangut, Pune.</p>
+      <p>Whether you are stopping for a meal, staying overnight or spending time with family and friends, our aim is to make your visit comfortable and memorable.</p>
+      <div class="checks">
+        <div class="check"><b>✓</b> Comfortable Rooms</div>
+        <div class="check"><b>✓</b> Family Dining</div>
+        <div class="check"><b>✓</b> Full Bar</div>
+        <div class="check"><b>✓</b> Parking</div>
+      </div>
+      <a class="btn btn-gold" href="#contact">Enquire Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="section rooms" id="rooms">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Stay with us</div>
+      <h2>Rooms for every kind of stay</h2>
+      <p>Choose from comfortable accommodation options designed for individual guests, couples and families.</p>
+    </div>
+    <div class="room-grid">
+      <article class="room reveal"><div class="room-number">01</div><h3>AC Rooms</h3><p>Comfortable air-conditioned rooms for a pleasant and relaxing stay.</p></article>
+      <article class="room reveal"><div class="room-number">02</div><h3>Non-AC Rooms</h3><p>Simple and comfortable rooms for guests looking for an easy stay.</p></article>
+      <article class="room reveal"><div class="room-number">03</div><h3>Deluxe Rooms</h3><p>A more spacious and comfortable option for a better stay experience.</p></article>
+      <article class="room reveal"><div class="room-number">04</div><h3>Family Rooms</h3><p>Convenient accommodation designed for families travelling together.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="dining">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Food & Drinks</div>
+      <h2>Good food. Good company.</h2>
+      <p>Enjoy a wide choice of food and drinks in a comfortable family-friendly setting.</p>
+    </div>
+    <div class="dining-grid">
+      <article class="dining-card reveal"><div class="icon">✦</div><h3>Maharashtrian</h3><p>Traditional flavours and favourites inspired by Maharashtra.</p></article>
+      <article class="dining-card reveal"><div class="icon">◆</div><h3>Punjabi</h3><p>Rich, hearty Punjabi-style dishes made for satisfying meals.</p></article>
+      <article class="dining-card reveal"><div class="icon">◈</div><h3>Chinese</h3><p>Popular Chinese dishes for a quick bite or a full meal.</p></article>
+      <article class="dining-card reveal"><div class="icon">❖</div><h3>Vegetarian</h3><p>A variety of vegetarian dishes for family and everyday dining.</p></article>
+      <article class="dining-card reveal"><div class="icon">♨</div><h3>Non-Veg</h3><p>Chicken and other non-vegetarian favourites for hearty meals.</p></article>
+      <article class="dining-card reveal"><div class="icon">◉</div><h3>Full Bar</h3><p>A relaxing bar experience with a comfortable ambience.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section features">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why Saiba</div>
+      <h2>Made for comfortable moments</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature reveal"><div class="feature-icon">♟</div><span>Family Dining</span></div>
+      <div class="feature reveal"><div class="feature-icon">⌂</div><span>Open Terrace</span></div>
+      <div class="feature reveal"><div class="feature-icon">◉</div><span>Full Bar</span></div>
+      <div class="feature reveal"><div class="feature-icon">✦</div><span>Hygienic Kitchen</span></div>
+      <div class="feature reveal"><div class="feature-icon">P</div><span>Parking</span></div>
+      <div class="feature reveal"><div class="feature-icon">☼</div><span>Peaceful Ambience</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gallery</div>
+      <h2>A glimpse of the experience</h2>
+      <p>Replace these sample images with your actual hotel and restaurant photos for a fully personalised gallery.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85" alt="Hotel exterior"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85" alt="Hotel interior"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Restaurant"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=85" alt="Dining ambience"></div>
+      <div class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=85" alt="Lodging"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section location" id="location">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Find us</div>
+      <h2>Right in Pirangut</h2>
+      <p>Easy to find and convenient for your stay, dining or family visit.</p>
+    </div>
+    <div class="location-grid">
+      <div class="info-card reveal">
+        <h3>Saiba Family Resto</h3>
+        <div class="info-row"><div class="info-icon">⌖</div><div><strong>Address</strong><span>In front of Bank of Baroda, Pirangut, Tal. Mulshi, Dist. Pune – 412115</span></div></div>
+        <div class="info-row"><div class="info-icon">☎</div><div><strong>Phone</strong><a href="tel:9921521881">+91 99215 21881</a><br><a href="tel:9096302304">+91 90963 02304</a><br><a href="tel:9881070218">+91 98810 70218</a></div></div>
+        <div class="info-row"><div class="info-icon">◷</div><div><strong>Hours</strong><span>Restaurant: 7 AM – 11 PM<br>Bar: 11 AM – 11 PM<br>Reception: 24 Hours</span></div></div>
+        <a class="btn btn-gold" style="margin-top:22px;width:100%" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Saiba+Family+Resto+Bar+Lodging+Pirangut+Pune">Open in Google Maps</a>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps?q=Saiba+Family+Resto+Bar+Lodging+Pirangut+Pune&output=embed" loading="lazy" title="Saiba Family Resto location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy reveal">
+      <div class="eyebrow">Contact Saiba</div>
+      <h2>Plan your visit today.</h2>
+      <p>Call us for room enquiries, dining information or bookings.</p>
+      <div class="phone-list">
+        <a href="tel:9921521881">+91 99215 21881</a>
+        <a href="tel:9096302304">+91 90963 02304</a>
+        <a href="tel:9881070218">+91 98810 70218</a>
+      </div>
+    </div>
+
+    <form class="form reveal" id="enquiryForm">
+      <div class="form-grid">
+        <div class="field"><label>Name</label><input type="text" required placeholder="Your name"></div>
+        <div class="field"><label>Phone</label><input type="tel" required placeholder="Your phone number"></div>
+        <div class="field"><label>Email</label><input type="email" placeholder="Your email"></div>
+        <div class="field"><label>Purpose</label><input type="text" placeholder="Room / Dining / Other"></div>
+        <div class="field full"><label>Message</label><textarea placeholder="Tell us how we can help"></textarea></div>
+      </div>
+      <button class="btn btn-gold" type="submit">Send Enquiry</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Saiba Family Resto</h3>
+        <p>Bar & Lodging</p>
+        <p style="margin-top:12px">Comfortable stay, delicious food and relaxing ambience – all in one place.</p>
+      </div>
+      <div>
+        <div class="footer-title">Visit</div>
+        <p>In front of Bank of Baroda,<br>Pirangut, Tal. Mulshi,<br>Dist. Pune – 412115</p>
+      </div>
+      <div>
+        <div class="footer-title">Call</div>
+        <p><a href="tel:9921521881">+91 99215 21881</a></p>
+        <p><a href="tel:9096302304">+91 90963 02304</a></p>
+        <p><a href="tel:9881070218">+91 98810 70218</a></p>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Saiba Family Resto, Bar & Lodging. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const menuBtn=document.querySelector('.menu-btn');
+const nav=document.querySelector('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add('show');
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.getElementById('enquiryForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const btn=this.querySelector('button');
+  btn.textContent='Enquiry Received ✓';
+  btn.disabled=true;
+  setTimeout(()=>{
+    btn.textContent='Send Enquiry';
+    btn.disabled=false;
+    this.reset();
+  },3000);
+});
+</script>
+</body>
+</html>
